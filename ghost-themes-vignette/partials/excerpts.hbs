@@ -1,0 +1,12 @@
+<div class="wrapper excerpts">
+    <div class="container">
+        {{#foreach posts}}
+            <div class="excerpt">
+                <a href="{{url}}">
+                    <h1>{{title}}</h1>
+                </a>
+                <p>{{excerpt words="70"}}&hellip;</p>
+            </div>
+        {{/foreach}}
+    </div>
+</div>

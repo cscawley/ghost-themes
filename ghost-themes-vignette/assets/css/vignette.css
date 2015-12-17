@@ -1,0 +1,278 @@
+@font-face {
+	font-family: 'icons';
+	src:url('../fonts/icons.eot?cud7dq');
+	src:url('../fonts/icons.eot?#iefixcud7dq') format('embedded-opentype'),
+		url('../fonts/icons.woff?cud7dq') format('woff'),
+		url('../fonts/icons.ttf?cud7dq') format('truetype'),
+		url('../fonts/icons.svg?cud7dq#icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+	content: "\f081";
+}
+.icon-facebook:before {
+	content: "\f082";
+}
+.icon-googleplus:before {
+	content: "\f0d4";
+}
+
+body {
+	font-family: 'Georgia', 'Times New Roman', Times, serif;
+	line-height: 1.5;
+}
+
+article, .article-blur {
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+section {
+	padding-top: 200px;
+	padding-bottom: 60px;
+}
+
+article {
+    color: #fff;
+	padding-top: 200px;
+	padding-bottom: 120px;
+	position: relative;
+	overflow: hidden;
+}
+
+.article-blur {
+	content: "";
+	top: -5%;
+	left: -5%;
+	width: 110%;
+	height: 110%;
+	position: absolute;
+	filter: blur(7px);
+	-webkit-filter: blur(7px);
+	opacity: 0;
+}
+
+.wrapper {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.container {
+	max-width: 630px;
+	position: relative;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+    margin: 30px 0 10px 0;
+}
+
+h1.title {
+    font-size: 70px;
+    font-weight: normal;
+    line-height: 75px;
+	margin: 0;
+	letter-spacing: -2px;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 31px;
+    margin: 20px 0 10px;
+}
+
+h2.caption {
+	font-style: italic;
+	font-size: 20px;
+	line-height: 25px;
+	margin: 10px 0 80px 0;
+	letter-spacing: -0.5px;
+	color: #999;
+}
+
+article h2.caption {
+	color: #D8D8DA;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 10px 0;
+}
+
+a {
+    color: #D8D8DA;
+}
+
+a:hover {
+	color: #fff;
+}
+
+p {
+    margin: 0 0 30px 0;
+	letter-spacing: -0.3px;
+}
+
+.content {
+    font-size: 16px;
+    line-height: 24px;
+    -webkit-columns: 2; /* Chrome, Safari, Opera */
+    -moz-columns: 2; /* Firefox */
+    columns: 2;
+    -webkit-column-gap: 30px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 30px; /* Firefox */
+    column-gap: 30px;
+}
+
+.meta {
+	padding-top: 120px;
+	padding-bottom: 120px;
+	background: #f5f5f5;
+}
+
+.author {
+	float: left;
+}
+
+.author img {
+	float: left;
+	width: 60px;
+	border-radius: 50%;
+}
+
+.author .info {
+	float: left;
+	width: 310px;
+	margin-left: 20px;
+	color: #262946;
+}
+
+.author a, .share-title {
+	color: #262946;
+	font-size: 18px;
+	margin-bottom: 5px;
+	display: block;
+	font-weight: 600;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	text-decoration: none;
+}
+
+.author .bio {
+	margin-bottom: 5px;
+}
+
+.share {
+	width: 180px;
+	float: left;
+	margin-left: 60px;
+}
+
+.share a, .excerpt a {
+	color: #262946;
+	opacity: 0.6;
+}
+
+.share a {
+    text-decoration: none;
+    font-size: 24px;
+	margin-right: 5px;
+}
+
+.share a:last-child {
+	margin-right: 0;
+}
+
+.share a:hover, .excerpt:last-child a:hover {
+    opacity: 1;
+}
+
+.excerpts {
+	padding-bottom: 100px;
+}
+
+.excerpt {
+	margin: 60px 0;
+}
+
+.excerpt a {
+	display: block;
+}
+
+footer {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	border-top: 1px solid #ddd;
+}
+
+footer a {
+	color: #262946;
+	opacity: 0.6;
+}
+
+footer a:hover {
+	color: #262946;
+	opacity: 1;
+}
+
+@media (max-width: 850px) {
+	article {
+		padding: 200px 10% 120px;
+	}
+	.content {
+		-webkit-columns: 1; /* Chrome, Safari, Opera */
+		-moz-columns: 1; /* Firefox */
+		columns: 1;
+	}
+}
+
+@media (max-width: 480px) {
+	h1.title {
+		font-size: 49px;
+		line-height: 54px;
+	}
+	h2.caption {
+		font-size: 18px;
+		line-height: 23px;
+		margin: 10px 0 40px 0;
+	}
+	article {
+		padding: 60px 10%;
+	}
+	section {
+		padding-top: 60px;
+		padding-bottom: 0;
+	}
+	.meta {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	.excerpts {
+		padding-bottom: 30px;
+	}
+	footer {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+}

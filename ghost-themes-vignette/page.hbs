@@ -1,0 +1,21 @@
+{{!< default}}
+
+{{#post}}
+
+    {{> post-meta}}
+
+    <section class="wrapper">
+        <div class="container">
+            <header>
+                <h1 class="title">{{title}}</h1>
+                <h2 class="caption">
+                    Last updated <time datetime="{{date format='YYYY-MM-DD'}}">{{date format='DD MMM YYYY'}}</time>.
+                </h2>
+            </header>
+            <div class="content excerpts">
+                {{content}}
+            </div>
+        </div>
+    </section>
+
+{{/post}}
