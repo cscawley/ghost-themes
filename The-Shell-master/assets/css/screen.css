@@ -29,21 +29,9 @@
    1. Icons - Sets up the icon font and respective classes
    ========================================================================== */
 
-/* Import the font file with the icons in it */
-@font-face {
-    font-family: 'icons';
-    src:url('../fonts/icons.eot');
-    src:url('../fonts/icons.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/icons.woff') format('woff'),
-        url('../fonts/icons.ttf') format('truetype'),
-        url('../fonts/icons.svg#icons') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* Apply these base styles to all icons */
-.icon-ghost, .icon-feed, .icon-twitter, .icon-google-plus, .icon-facebook {
-    font-family: 'icons';
+.icon-ampelos, .icon-feed, .icon-twitter, .icon-google-plus, .icon-facebook {
+    font-family: FontAwesome;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -54,23 +42,23 @@
     text-decoration: none;
 }
 
-/* Each icon is created by inserting the corret character into the 
-   content of the :before pseudo element. Like a boss. */
-.icon-ghost:before {
-    content: "\e000";
+/* Each icon is created by inserting the corret character into the
+   content of the :before pseudo element. */
+.icon-ampelos:before {
+    content: "\f192";
 }
 .icon-feed:before {
-    content: "\e001";
+    content: "\f09e";
 }
 .icon-twitter:before {
-    content: "\e002";
+    content: "\f081";
     font-size: 1.1em;
 }
 .icon-google-plus:before {
-    content: "\e003";
+    content: "\f0d4";
 }
 .icon-facebook:before {
-    content: "\e004";
+    content: "\f082";
 }
 
 
@@ -277,8 +265,8 @@ kbd {
     font-weight: bold;
     background: #f4f4f4;
     border-radius: 4px;
-    box-shadow: 
-        0 1px 0 rgba(0, 0, 0, 0.2), 
+    box-shadow:
+        0 1px 0 rgba(0, 0, 0, 0.2),
         0 1px 0 0 #fff inset;
 }
 
@@ -366,22 +354,152 @@ button, input, select, textarea {
    ========================================================================== */
 
 /* Big cover image on the home page */
-#site-head {
+#site-hero {
     position: relative;
     display: table;
     width: 100%;
-    height: 60%;
-    margin-bottom: 5rem;
+    padding-top: 200px;
+    padding-bottom: 100px;
     text-align: center;
     color: #a0add5;
-    background: #1c212b no-repeat center center;
+    background: rgb(40, 44, 52) no-repeat center center
     background-size: cover;
 }
 
-/* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
-   
+.navi-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 0;
+	background: rgb(33, 37, 43);;
+	z-index: 50;
+	font-family: 'Lato', Arial, sans-serif;
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	transform: translateY(0%);
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+/* Text styling */
+.navi-header h1,
+.navi-header h1::before,
+.navi-header h1 span,
+.navi-header nav,
+.navi-header nav::before {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: left;
+}
+
+.navi-header h1 {
+	font-weight: 300;
+	font-size: 3.2em;
+	margin: 0;
+	padding: 0 1em 0 0;
+	color: #2d383f;
+	cursor: default;
+	height: 100%;
+	z-index: 1;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.navi-header h1::before,
+.navi-header nav::before {
+	content: '';
+	height: 100%;
+}
+
+.navi-header h1::after {
+	content: '';
+	width: 100px;
+	height: 96px;
+	background: #fff;
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	box-shadow: inset 0 8px #2d383f, inset 0 16px #fff, inset 0 24px #2d383f, inset 0 32px #fff, inset 0 40px #2d383f, inset 0 48px #fff, inset 0 56px #2d383f;
+	opacity: 0;
+	border: 20px solid #fff;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.navi-header nav {
+	height: 100%;
+}
+
+.navi-right {
+  float:right;
+  padding-right: 40px;
+}
+
+.navi-header nav a {
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+    padding: 0.2em 0.4em;
+    margin: 0 0.4em 0;
+    font-size: 16px;
+    cursor: pointer;
+    color: rgb(157, 165, 180);
+    outline: none;
+    text-decoration: none;
+}
+
+.navi-header nav a:hover {
+	color: #bc3c2f;
+}
+
+.navi-header nav a:last-child {
+    margin-right: 0;
+}
+
+.navi-header-small {
+	padding: 16px 0;
+}
+
+.navi-header-large {
+	padding: 35px 0;
+}
+
+.navi-header-large .navi-brand {
+  font-size: 16px;
+  color: #e74c3c;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-transition: all .1s;
+  -moz-transition: all .1s;
+  transition: all .1s;
+  padding-left: 65px;
+  opacity: 0;
+  display: none;
+}
+
+.navi-header-small .navi-brand {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(224, 108, 117);
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-transition: all .1s;
+  -moz-transition: all .1s;
+  transition: all .1s;
+  padding-left: 65px;
+  opacity: 1;
+  display: inline-block;
+}
+
 #blog-logo {
-    width: 100px;
+    width: 235px;
     border-radius: 50%;
     overflow: hidden;
     display: block;
@@ -389,36 +507,35 @@ button, input, select, textarea {
     border: 5px solid #bf6165;
 
 }
-#blog-logo:before {  
-     width: 100px;
-     height: 100px;
+#blog-logo:before {
+     width: 235px;
+     height: 235px;
     border-radius: 50%;
     overflow: hidden;
     display: block;
     margin: 0 auto;
-    content: "";  
-    display: block;  
-    position: absolute;  
-    top: 0;  
-    bottom: 0;  
-    left: 0;  
-    right: 0; 
-    background: none; 
-    -moz-transition: background .3s linear;  
-    -webkit-transition: background .3s linear;  
-    -o-transition: background .3s linear;  
-    transition: background .3s linear;  
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: none;
+    -moz-transition: background .3s linear;
+    -webkit-transition: background .3s linear;
+    -o-transition: background .3s linear;
+    transition: background .3s linear;
     border: 5px solid #bf6165;
 
 }
 
 #blog-logo:hover:before {
-    background: rgba(204,31,39, 0.5);  
-    
+    background: rgba(204,31,39, 0.5);
 }
 #blog-logo img {
     display: block;
-    max-height: 100px;
+    max-height: 235px;
     width: auto;
     line-height: 0;
     border-radius: 50%;
@@ -437,14 +554,34 @@ button, input, select, textarea {
 
 /* The details of your blog. Defined in ghost/settings/ */
 .blog-title {
-    margin: 10px 0 10px 0;
-    font-size: 5rem;
+    margin: 20px 0 16px 0;
+    font-size: 6.5rem;
     letter-spacing: -1px;
+}
+
+hr.hero-space {
+  margin: 32px auto 27px;
+  padding: 0;
+  max-width: 250px;
+  border: 0;
+  border-top: solid 5px;
+  border-color: #a0add5;
+  text-align: center;
+}
+hr.hero-space::after{
+  content: "\f121";
+  background-color: #2b303b;
+  display: inline-block;
+  position: relative;
+  top: -.5em;
+  padding: 0 .26em;
+  font-family: FontAwesome;
+  font-size: 1.8em;
 }
 
 .blog-description {
     margin: 0;
-    font-size: 1.8rem;
+    font-size: 2.8rem;
     line-height: 1.5em;
     font-weight: 300;
     letter-spacing: 0;
@@ -462,9 +599,7 @@ button, input, select, textarea {
     hyphens: auto;
 }
 
-/* Add a little circle in the middle of the border-bottom on our .post
-   just for the lolz and stylepoints. */
-/*.post:after {
+.post:after {
     display: block;
     content: "";
     width: 7px;
@@ -479,7 +614,7 @@ button, input, select, textarea {
     -moz-border-radius: 100%;
     border-radius: 100%;
     box-shadow: #fff 0 0 0 5px;
-}*/
+}
 
 .post-title {
     margin:0;
@@ -553,6 +688,34 @@ button, input, select, textarea {
     display: block;
     font-size: 1.4rem;
     line-height: 1.5em;
+}
+
+.author-image {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    margin-left: -25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    overflow: hidden;
+    padding: 0px;
+    background: rgb(157, 165, 180);
+    z-index: 2;
+    box-shadow: rgb(157, 165, 180) 0 0 0 6px;
+}
+.author-image .img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 100%;
 }
 
 /* ==========================================================================
@@ -726,17 +889,17 @@ button, input, select, textarea {
     color: #50585D;
 }
 
-.poweredby .icon-ghost {
+.poweredby .icon-ampelos {
     color: #bf6165;
     font-weight: 700;
     text-decoration: none;
 }
 
-.poweredby .icon-ghost:hover {
+.poweredby .icon-ampelos:hover {
     text-decoration: none;
 }
 
-.poweredby .icon-ghost:before {
+.poweredby .icon-ampelos:before {
     font-size: 1rem;
     margin-right: 0.2em;
 }
@@ -829,22 +992,22 @@ button, input, select, textarea {
         margin-left: 0;
     }
 
-    #site-head {
-        -webkit-box-sizing: border-box; 
+    #site-hero {
+        -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
-        box-sizing: border-box; 
+        box-sizing: border-box;
         height: auto;
         min-height: 240px;
-        padding: 15% 0;
+        padding: 27% 0;
     }
 
     .blog-title {
-        font-size: 4rem;
+        font-size: 2em;
         letter-spacing: -1px;
     }
 
     .blog-description {
-        font-size: 1.7rem;
+        font-size: 1.4em;
         line-height: 1.5em;
     }
 
@@ -861,7 +1024,7 @@ button, input, select, textarea {
         padding: 40px 0;
     }
     .post-header #blog-logo:before {
-        margin: 40px auto        
+        margin: 40px auto
     }
 
     h1 {
@@ -880,8 +1043,28 @@ button, input, select, textarea {
     h4 {
         font-size: 2.8rem;
     }
+    .navi-header nav a {
+    	display: inline-block;
+    	text-transform: uppercase;
+    	letter-spacing: 1px;
+    	font-weight: 700;
+        padding: 0.2em 0.4em;
+        margin: 0 0.4em 0;
+        font-size: 16px;
+        cursor: pointer;
+        color: rgb(157, 165, 180);
+        outline: none;
+        text-decoration: none;
+    }
 
 }
+
+@media (min-width: 768px){
+    .blog-title {
+      font-size: 4em;
+    }
+}
+
 
 /* ==========================================================================
    10. Media Queries - Smaller than 500px
@@ -896,11 +1079,11 @@ button, input, select, textarea {
     #blog-logo {
         width: 80px;
     }
-    #blog-logo:before {  
+    #blog-logo:before {
         width: 80px;
         height: 80px;
     }
-    .inner, 
+    .inner,
     .pagination {
         width: auto;
         margin-left: 16px;
@@ -913,10 +1096,6 @@ button, input, select, textarea {
         margin-right: 16px;
         font-size: 0.8em;
         line-height: 1.6em;
-    }
-
-    #site-head {
-        padding: 10% 0;
     }
 
     .blog-title {
