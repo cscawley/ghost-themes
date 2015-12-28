@@ -1,64 +1,73 @@
 {{!< default}}
-
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
-
-{{! The big featured header on the homepage, with the site logo and description }}
 <header id="navi-header" class="navi-header navi-header-large">
   <a class="navi-brand">{{@blog.title}}</a>
   <nav class="navi-right">
-    <a>Articles</a>
-    <a>Curriculum</a>
-    <a>Projects</a>
-    <a>Contact</a>
+    <a href="#A">Articles</a>
+    <a href="#B">Curriculum</a>
+    <a href="#C">Projects</a>
+    <a href="#D">Contact</a>
   </nav>
 </header>
 <section>
-<div id="site-hero" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
-    <div class="vertical animated bounceInDown">
-        <div id="site-head-content" class="inner">
-            {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-            <h1 class="blog-title">{{@blog.title}}</h1>
-            <hr class="hero-space"></hr>
-            <h2 class="blog-description">{{@blog.description}}</h2>
-        </div>
-    </div>
-</div>
+  <div id="site-hero" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+      <div class="vertical animated bounceInDown">
+          <div id="site-head-content" class="inner">
+              {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+              <h1 class="blog-title">{{@blog.title}}</h1>
+              <hr class="hero-space"></hr>
+              <h2 class="blog-description">{{@blog.description}}</h2>
+          </div>
+      </div>
+  </div>
 </section>
-{{! The main content area on the homepage }}
-<section class="js-waypoint" data-animate-down="navi-header-small" data-animate-up="navi-header-large">
-<main class="content" role="main">
-
+{{! Article content }}
+<section id="A" class="js-waypoint" data-animate-down="navi-header-small" data-animate-up="navi-header-large">
+  <div class="content">
     {{! Each post will be output using this markup }}
     {{#foreach posts}}
-
     <article class="{{post_class}}">
         <header class="post-header">
             <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}on {{tags}}{{/if}}</span>
-            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-
-            <!--<a href="{{url}}#disqus_thread"></a>-->
+            <h3 class="post-title"><a href="{{url}}">{{{title}}}</a></h3>
         </header>
         <section class="post-excerpt">
             <p>{{excerpt}}&hellip;</p>
         </section>
     </article>
-
     {{/foreach}}
-
     {{!! After all the posts, we have the previous/next pagination links }}
-    {{pagination}}
-
-  <!--  <script type="text/javascript">
-    var disqus_shortname = d_id;
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-    var s = document.createElement('script'); s.async = true;
-    s.type = 'text/javascript';
-    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-  </script>-->
-</main>
+    <a></a>
+  </div>
+</section>
+<section id="B">
+  <div class="content">
+    <h2 class="section-title">CURRICULUM</h2>
+    <div class="row">
+      <div class="lefty-col">
+        <h3>Work Experience</h3>
+        <ul>
+          <li>Tulane</li>
+          <li>Freelance Filmmaker</li>
+          <li>Oviatt Library</li>
+          <li>IFP Minnesota</li>
+          <li>Nicolett Village Video</li>
+        </ul>
+      </div>
+      <div class="righty-col">
+        <h3>Education</h3>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="C">
+  <div class="content">
+    <h2 class="section-title">Projects</h2>
+  </div>
+</section>
+<section id="D">
+  <div class="content">
+    <h2 class="section-title">Contact</h2>
+  </div>
 </section>
