@@ -24,7 +24,6 @@
 </section>
 {{! Article content }}
 <section id="A" class="js-waypoint" data-animate-down="navi-header-small" data-animate-up="navi-header-large">
-  <div class="content">
     {{! Each post will be output using this markup }}
     {{#foreach posts}}
     <article class="{{post_class}}">
@@ -32,22 +31,23 @@
             <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}on {{tags}}{{/if}}</span>
             <h3 class="post-title"><a href="{{url}}">{{{title}}}</a></h3>
         </header>
-        <section class="post-excerpt">
+        <div class="post-excerpt">
             <p>{{excerpt}}&hellip;</p>
-        </section>
+        </div>
     </article>
     {{/foreach}}
     {{!! After all the posts, we have the previous/next pagination links }}
     <a></a>
-  </div>
 </section>
 <section id="B">
-  <div class="content">
+  <div class="container">
     <h2 class="section-title">CURRICULUM</h2>
-    <div class="row">
-      <div class="lefty-col">
-        <h3>Work Experience</h3>
+    <hr class="hero-space"></hr>
+    <div class="row content">
+      <div class="col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2">
+        <h3 class="section-subtitle">Work Experience</h3>
         <ul>
+          <li>Tulane</li>
           <li>Tulane</li>
           <li>Freelance Filmmaker</li>
           <li>Oviatt Library</li>
@@ -55,19 +55,29 @@
           <li>Nicolett Village Video</li>
         </ul>
       </div>
-      <div class="righty-col">
-        <h3>Education</h3>
+      <div class="col-md-5 col-lg-4">
+        <h3 class="section-subtitle">Education</h3>
+        <ul>
+          <li>California State University Northridge</li>
+          <li>Minneapolis Community & Technical College</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 <section id="C">
-  <div class="content">
+  <div class="container">
     <h2 class="section-title">Projects</h2>
+    <hr class="hero-space"></hr>
+    <div class="content">
+    </div>
   </div>
 </section>
 <section id="D">
-  <div class="content">
+  <div class="container">
     <h2 class="section-title">Contact</h2>
+    <hr class="hero-space"></hr>
+    <div class="content">
+    </div>
   </div>
 </section>
