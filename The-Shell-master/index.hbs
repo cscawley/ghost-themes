@@ -2,12 +2,12 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 <header id="navi-header" class="navi-header navi-header-large">
-  <a class="navi-brand">{{@blog.title}}</a>
+  <a href="#" class="navi-brand">{{@blog.title}}</a>
   <nav class="navi-right">
-    <a href="#A">Articles</a>
-    <a href="#B">Curriculum</a>
-    <a href="#C">Projects</a>
-    <a href="#D">Contact</a>
+    <a href="#Articles">Articles</a>
+    <a href="#Curriculum">Curriculum</a>
+    <a href="#Projects">Projects</a>
+    <a href="#Contact">Contact</a>
   </nav>
 </header>
 <section>
@@ -23,7 +23,7 @@
   </div>
 </section>
 {{! Article content }}
-<section id="A" class="js-waypoint" data-animate-down="navi-header-small" data-animate-up="navi-header-large">
+<section id="Articles" class="js-waypoint" data-animate-down="navi-header-small" data-animate-up="navi-header-large">
     {{! Each post will be output using this markup }}
     {{#foreach posts}}
     <article class="{{post_class}}">
@@ -39,7 +39,7 @@
     {{!! After all the posts, we have the previous/next pagination links }}
     <a></a>
 </section>
-<section id="B">
+<section id="Curriculum">
   <div class="container">
     <h2 class="section-title">CURRICULUM</h2>
     <hr class="hero-space"></hr>
@@ -51,9 +51,9 @@
           <li>Tulane University, Web Developer</li>
           <li>Tulane University, Data Center Operator</li>
           <li>Freelance Filmmaker</li>
-          <li>Oviatt Library</li>
-          <li>IFP Minnesota</li>
-          <li>Nicolett Village Video</li>
+          <li>Oviatt Library, Archivist</li>
+          <li>IFP Minnesota, Office PA</li>
+          <li>Nicolett Village Video, Video Clerk</li>
         </ul>
       </div>
       <div class="col-md-5 col-lg-4">
@@ -71,25 +71,25 @@
     </div>
   </div>
 </section>
-<section id="C">
+<section id="Projects">
   <div class="container">
     <h2 class="section-title">Projects</h2>
     <hr class="hero-space"></hr>
     <div class="content">
       <div class="row">
         <div class="col-md-3 col-md-offset-3 code-projects">
-          <a href="https://github.com/cscawley" class="icon-github">
+          <a href="https://github.com/cscawley" target="_blank" class="icon-github">
           </a>
         </div>
-        <div class="col-md-2 film-projects">
-          <a class="icon-imdb">
+        <div class="col-md-3 film-projects">
+          <a href="http://www.imdb.com/name/nm5579947" target="_blank" class="icon-imdb">
           </a>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section id="D">
+<section id="Contact">
   <div class="container">
     <h2 class="section-title">Contact</h2>
     <hr class="hero-space"></hr>
