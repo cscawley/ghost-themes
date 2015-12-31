@@ -1,3 +1,16 @@
+# from my global ignore file
+#
 *~
 .DS_Store
+
+# dev themes
+#
+attila-master
 casper
+CodeIonic
+ghost-themes-phantom
+ghost-themes-vignette
+Gunter-master
+mtheme-master
+Swaggy-Bastard-master
+whisper-master
