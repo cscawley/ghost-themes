@@ -56,20 +56,24 @@
 /* Each icon is created by inserting the corret character into the
    content of the :before pseudo element. */
 .icon-ampelos:before {
-    content: "\f192";
+  content: "\f192";
 }
 .icon-feed:before {
-    content: "\f09e";
+  content: "\f09e";
+  text-decoration: none;
 }
 .icon-twitter:before {
-    content: "\f081";
-    font-size: 1.1em;
+  content: "\f081";
+  font-size: 1.1em;
+  text-decoration: none;
 }
 .icon-google-plus:before {
-    content: "\f0d4";
+  content: "\f0d4";
+  text-decoration: none;
 }
 .icon-facebook:before {
-    content: "\f082";
+  content: "\f082";
+  text-decoration: none;
 }
 .icon-imdb:before{
   content: "\1f32f";
@@ -662,12 +666,12 @@ hr.hero-space::after{
 }
 
 a.icon-github {
-  font-size: 4em;
+  font-size: 2.65em;
   text-decoration: none;
 }
 
 a.icon-imdb {
-  font-size: 4em;
+  font-size: 2.65em;
   text-decoration: none;
 }
 
