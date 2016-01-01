@@ -3,7 +3,7 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 
-<main class="content" role="main">
+<main role="main">
 
     <article class="{{post_class}}">
 
@@ -20,22 +20,22 @@
 
         <h1 class="post-title">{{{title}}}</h1>
 
-        <section class="post-content">
+        <div class="post-content">
             {{content}}
-        </section>
+        </div>
 
         <footer class="post-footer">
           <figure class="author-image">
               <img class="img" src="{{author.image}}" alt="{{author.name}}" width="100" />
           </figure>
           {{#if author}}
-              <section class="author">
+              <div class="author">
                   <h4>{{author.name}}</h4>
                   <p>{{author.bio}}</p>
-              </section>
+              </div>
           {{/if}}
 
-            <section class="share">
+            <div class="share">
                 <h4>Share this</h4>
                 <a class="icon-twitter" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
@@ -49,7 +49,7 @@
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <span class="hidden">Google+</span>
                 </a>
-            </section>
+            </div>
 
         </footer>
 
