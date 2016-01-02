@@ -62,7 +62,7 @@
   content: "\f09e";
   text-decoration: none;
 }
-.icon-twitter:before {
+.icon-twitter-share:before {
   content: "\f081";
   font-size: 1.1em;
   text-decoration: none;
@@ -82,8 +82,18 @@
   content: "\1f301";
   text-decoration: none;
 }
-
-
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-linkedin:before {
+  content: "\f0e1";
+}
+.icon-secret:before {
+  content: "\f1c9";
+}
+.icon-discord:before {
+  content: "\1f359";
+}
 /* ==========================================================================
    2. General - Setting up some base styles
    ========================================================================== */
@@ -656,25 +666,31 @@ hr.hero-space::after{
 }
 
 /* projects */
-
+.project-section-title {
+  text-align: center;
+  font-size: 16px;
+}
 .code-projects {
   text-align: center;
 }
-
 .film-projects {
   text-align: center;
 }
-
+.contact-content {
+  text-align: center;
+}
 a.icon-github {
-  font-size: 2.65em;
+  font-size: 2em;
   text-decoration: none;
 }
-
 a.icon-imdb {
   font-size: 2.65em;
   text-decoration: none;
 }
-
+a.icon-contact {
+  font-size: 2.65em;
+  text-decoration: none;
+}
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
