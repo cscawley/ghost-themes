@@ -56,7 +56,7 @@
 /* Each icon is created by inserting the corret character into the
    content of the :before pseudo element. */
 .icon-ampelos:before {
-  content: "\f192";
+  content: "\1f3ea";
 }
 .icon-feed:before {
   content: "\f09e";
@@ -93,6 +93,9 @@
 }
 .icon-discord:before {
   content: "\1f359";
+}
+.icon-slack:before {
+  content: "\1f30a";
 }
 /* ==========================================================================
    2. General - Setting up some base styles
@@ -357,7 +360,7 @@ button, input, select, textarea {
 }
 
 section {
-  padding: 100px 0;
+  padding: 100px 0 0;
 }
 
 /* ==========================================================================
@@ -666,6 +669,10 @@ hr.hero-space::after{
 }
 
 /* projects */
+.projects-content {
+  text-align: center;
+  padding: 10px 0 100px;
+}
 .project-section-title {
   text-align: center;
   font-size: 16px;
@@ -676,8 +683,11 @@ hr.hero-space::after{
 .film-projects {
   text-align: center;
 }
+
+/* contact */
 .contact-content {
   text-align: center;
+  padding: 0px 0 30px;
 }
 a.icon-github {
   font-size: 2em;
@@ -690,6 +700,13 @@ a.icon-imdb {
 a.icon-contact {
   font-size: 2.65em;
   text-decoration: none;
+}
+a.icon-slack {
+  font-size: 2.65;
+  text-decoration: none;
+}
+.contact-twitter, .contact-discord, .contact-linkedin, .contact-slack {
+  padding-bottom: 25px;
 }
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
@@ -1159,6 +1176,14 @@ a.icon-contact {
         text-decoration: none;
     }
 
+}
+@media (max-width: 734px){
+  .navi-header nav{
+    display: none;
+  }
+  .navi-header-small .navi-brand{
+    padding-left: 23px;
+  }
 }
 
 @media (min-width: 768px){
